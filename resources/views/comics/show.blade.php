@@ -5,23 +5,23 @@
 <section class="container bg-white mt-4 ">
     <h1 class="text-center">{{$comic->title}}</h1>
     <div class="row">
-        <div class="col-12 col-md-4">
-            <img src="{{$comic->thumb}}" class="img-fluid" alt="{{$product->title}}">
+        <div class="col-12 col-md-4 my-3" >
+            <img src="{{$comic->thumb}}" class="img-fluid" alt="{{$comic->title}}">
         </div>
         <div class="col-12 col-md-8">
             <p>{!!$comic->description!!}</p>
-            <div>
+            <h6>
                 Tipo: {{$comic->type}}
-            </div>
-            <div>
+            </h6>
+            <h6>
                 Prezzo: {{$comic->price}}
-            </div>
-            <div>
+            </h6>
+            <h6>
                 Data: {{$comic->sale_date}}
-            </div>
-            <div>
+            </h6>
+            <h6>
                 Serie: {{$comic->series}}
-            </div>
+            </h6>
         </div>
     </div>
 </section>
