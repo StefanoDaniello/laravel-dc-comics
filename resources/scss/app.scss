@@ -9,3 +9,21 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer-top{
+    background-image: $bg-img
+}
+#logo-footer{
+    background-image: $bg-logo
+}
+
