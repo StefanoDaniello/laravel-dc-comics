@@ -29,13 +29,26 @@ $menu = [
                     <div class="border-b"></div>
                 </a>
             </li>
-            @foreach ($menu as $menuItem) 
+            <!-- @foreach ($menu as $menuItem) 
             <li class="mx-2 fw-bold text-h ">
                 {{$menuItem}}
                 <div class="border-b"></div>
             </li>
-            @endforeach
-            
+            @endforeach -->
+            <li class="mx-2 fw-bold text-h ">
+            <a class="nav-link {{ Route::currentRouteName() == 'comics.index' ? 'active color-h' : ''}}" 
+                    href="{{route('comics.index')}}">
+                    COMICS
+                    <div class="border-b"></div>
+                </a>
+            </li> 
+            <li class="mx-2 fw-bold text-h ">
+            <a class="nav-link {{ Route::currentRouteName() == 'comics.create' ? 'active color-h' : ''}}" 
+                    href="{{route('comics.create')}}">
+                    ADD
+                    <div class="border-b"></div>
+                </a>
+            </li>
             <li class="mx-2 fw-bold text-h ">
             <a class="nav-link {{ Route::currentRouteName() == 'about' ? 'active color-h' : ''}}" 
                     href="{{route('about')}}">
