@@ -9,6 +9,17 @@
         <h2>CURRENT SERIES</h2>
     </div>
     <div class="container">
+        <section class="container mt-4" id="products">
+        <form action="{{route('comics.index')}}" method="GET" id="search-form">
+        <select name="search" id="search" class="form-control w-25" required>
+            <option selected value="">Seleziona</option>
+            <option value="">Tutti</option>
+            <option value="comic book">comic book</option>
+            <option value="graphic novel">graphic novel</option>
+            <option value="other">other</option>
+        </select>
+        <!-- <button type="submit" class="btn btn-primary mt-3">Cerca</button> -->
+        </form>
         <div class="row">
             @foreach ($comics as $comic) 
                 <div  class="col-12 col-sm-6 col-md-4 my-3">

@@ -12,7 +12,14 @@ class ComicController extends Controller
      */
     public function index(Request $request)
     {
-      $comics = Comic::all();
+
+        if(!empty($request->query('search'))){
+            $type = $request->query('search');
+            $comics = Comic::where('type', $type)->get();
+        }else{
+            $comics = Comic::all();
+        }
+    //   $comics = Comic::all();
     //  dd($comics);
     return view("comics.index", compact("comics"));
 
@@ -23,6 +30,7 @@ class ComicController extends Controller
      */
     public function create()
     {
+        
         return view('comics.create');
     }
 

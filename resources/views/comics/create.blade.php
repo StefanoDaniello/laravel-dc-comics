@@ -37,9 +37,9 @@
             <label for="type" class="from-label">Tipo</label>
             <select name="type" id="type" class="form-control" required>
                 <option value="">Seleziona</option>
-                <option value="1">Comic book</option>
-                <option value="2">film</option>
-                <option value="3">Other</option>
+                <option value="comic book">Comic book</option>
+                <option value="graphic novel">graphic novel</option>
+                <option value="other">Other</option>
             </select>
          </div>
 
