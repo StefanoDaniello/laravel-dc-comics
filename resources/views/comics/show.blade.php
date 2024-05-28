@@ -25,6 +25,20 @@
 
             <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-primary">Modifica</a>
 
+            {{-- <form action="{{route('comics.destroy', $comic->id)}}" method="POST" class="mx-3">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Elimina" class="btn btn-danger">
+            </form> --}}
+
+
+
+
+
+
+
+
+
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Elimina
@@ -51,6 +65,9 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 </section>
