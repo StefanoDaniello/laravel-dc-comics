@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
 const deleteButton = document.getElementById("comicDelete");
 if (deleteButton) {
     deleteButton.addEventListener("click", (e) => {

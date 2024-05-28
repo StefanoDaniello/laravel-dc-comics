@@ -2,11 +2,11 @@
 @section('title', 'create')
 
 @section('content')
-<section class="container ">
-<h1>Create</h1>
+<section class="container">
+    <h1>Create</h1>
     <form action="{{route('comics.store')}}" method="POST">
     <!-- è un token di sicurezza per far 
-    in modo che i dati in post arrivano solo da questo form  -->
+    in modo che i dati in post arrivano solo da questo form -->
     @csrf
     @method('PUT')
         <div class="mb-3">
@@ -48,7 +48,6 @@
             <button type="submit" class="btn btn-danger">annulla</button>
             <button type="submit" class="btn btn-primary">crea</button>
         </div>
-        
     </form>
 </section>
 @endSection
