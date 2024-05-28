@@ -4,10 +4,11 @@
 @section('content')
 <section class="container ">
 <h1>Create</h1>
-    <form action="{{route('comics.store')}}" method="POST">
+    <form action="{{route('comics.update', $comic->id)}}" method="POST">
     <!-- è un token di sicurezza per far 
     in modo che i dati in post arrivano solo da questo form  -->
     @csrf
+    @method('PUT')
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="titleHelp" name="title" required>

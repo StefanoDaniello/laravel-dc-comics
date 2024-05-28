@@ -41,7 +41,7 @@ class ComicController extends Controller
     {   
         $form_data = $request->all();
         $new_comic = Comic::create($form_data);
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('message', "Created {$new_comic->title} successfully");
     }
 
     /**
@@ -65,7 +65,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $form_data = $request->all();
+        $comic->update($form_data);
+        return redirect()->route('comics.index', $comic->id);
     }
 
     /**
@@ -73,6 +75,7 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index')->with('message', "Deleted {$comic->title} successfully");
     }
 }

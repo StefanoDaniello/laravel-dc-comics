@@ -9,6 +9,12 @@
         <h2>CURRENT SERIES</h2>
     </div>
     <div class="container">
+        @if(session()->has('message')){
+            <div class="alert alert-success">
+                {{session('message')}}
+            </div>
+        }
+        @endif
         <section class="container mt-4" id="products">
         <form action="{{route('comics.index')}}" method="GET" id="search-form">
         <select name="search" id="search" class="form-control w-25" required>
