@@ -18,7 +18,6 @@
         <section class="container mt-4" id="products">
         <form action="{{route('comics.index')}}" method="GET" id="search-form">
         <select name="search" id="search" class="form-control w-25" required>
-            <option selected value="">Seleziona</option>
             <option value="">Tutti</option>
             <option value="comic book">comic book</option>
             <option value="graphic novel">graphic novel</option>

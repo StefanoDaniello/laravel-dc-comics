@@ -4,7 +4,7 @@
 @section('content')
 <section class="container ">
 <h1>Create</h1>
-    <form action="{{route('comics.update', $comic->id)}}" method="POST">
+    <form action="{{route('comics.store')}}" method="POST">
     <!-- è un token di sicurezza per far 
     in modo che i dati in post arrivano solo da questo form  -->
     @csrf
