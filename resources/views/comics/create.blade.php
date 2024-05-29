@@ -12,45 +12,63 @@
                 <label for="title" class="form-label ">Title</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="titleHelp" name="title"
                     value="{{old('title')}}">
-                    @if($errors->has('title'))
+                    {{-- @if($errors->has('title'))
                         <div class ="alert alert-danger">{{$errors->first('title')}}</div>
-                    @endif
+                    @endif --}}
+                    @error('title')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 <div id="titleHelp" class="form-text">Inserisci titolo</div>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label ">Description</label>
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control @error('description') is-invalid @enderror" value="{{old('description')}}"></textarea>
-                @if($errors->has('description'))
+                {{-- @if($errors->has('description'))
                     <div class ="alert alert-danger">{{$errors->first('description')}}</div>
-                @endif
+                @endif --}}
+                @error('description')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="thumb" class="form-label ">image</label>
                 <input type="text" class="form-control @error('thumb') is-invalid @enderror" id="image" name="thumb" value="{{old('thumb')}}">
-                @if($errors->has('thumb'))
+                {{-- @if($errors->has('thumb'))
                     <div class ="alert alert-danger">{{$errors->first('thumb')}}</div>
-                @endif
+                @endif --}}
+                @error('thumb')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label ">Price</label>
                 <input type="number" class="form-control @error('price') is-invalid @enderror" id="weight" name="price" value="{{old('price')}}">
-                @if($errors->has('price'))
+                {{-- @if($errors->has('price'))
                     <div class ="alert alert-danger">{{$errors->first('price')}}</div>
-                @endif
+                @endif --}}
+                @error('price')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="series" class="form-label ">Serie</label>
                 <input type="text" class="form-control @error('series') is-invalid @enderror" id="cooking_time" name="series" value="{{old('series')}}">
-                @if($errors->has('series'))
+                {{-- @if($errors->has('series'))
                     <div class ="alert alert-danger">{{$errors->first('series')}}</div>
-                @endif
+                @endif --}}
+                @error('series')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="scale_date" class="form-label ">Scale date</label>
                 <input type="date" class="form-control @error('scale_date') is-invalid @enderror" id="cooking_time" name="sale_date" value="{{old('sale_date')}}">
-                @if($errors->has('scale_date'))
+                {{-- @if($errors->has('scale_date'))
                     <div class ="alert alert-danger">{{$errors->first('scale_date')}}</div>
-                @endif
+                @endif --}}
+                @error('scale_date')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="type" class="from-label">Tipo</label>
@@ -60,9 +78,12 @@
                     <option value="graphic novel">graphic novel</option>
                     <option value="other">Other</option>
                 </select>
-                @if($errors->has('type'))
+                {{-- @if($errors->has('type'))
                     <div class ="alert alert-danger">{{$errors->first('type')}}</div>
-                @endif
+                @endif --}}
+                @error('type')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
 
             <div class="text-center my-3">
