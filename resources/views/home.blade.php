@@ -58,7 +58,7 @@
     }
    .card-img{
        height: 500px;
-   }
+    }
    .button-blue{
        width: 300px;
        height: 80px;
@@ -67,5 +67,5 @@
        border: 2px solid white;
        border-radius: 10px;
        transform: translate(50%, -50%);
-   }
+    }
 </style>

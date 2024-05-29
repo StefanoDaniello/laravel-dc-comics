@@ -37,6 +37,8 @@ $shopimg=[
         color: #ffffff;
     }
     .shopimg-width{
-        width: 60px;
+        img{
+            width: 60px;
+        }
     }
 </style>

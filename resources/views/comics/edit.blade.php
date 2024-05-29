@@ -2,9 +2,8 @@
 @section('title', $comic->title)
 
 @section('content')
-<section>
-    <h1>{{ $comic->title }}</h1>
-    <h2>edit</h2>
+<section class="container">
+    <h1 class="text-center">{{ $comic->title }}</h1>
     <form action="{{route('comics.update', $comic->id)}}" method="POST">
         @csrf
         @method('PUT')
@@ -44,8 +43,13 @@
               <option value="cortissima" {{$comic->type === 'other' ? 'selected' : ''}}>other</option>
             </select>
           </div>
-        <button type="submit" class="btn btn-primary">Modifica</button>
-        <button type="reset" class="btn btn-danger">Annulla</button>
+        <div class="container text-center my-5">
+          <button type="submit" class="btn btn-primary mx-4">Modifica</button>
+          <button type="reset" class="btn btn-danger">
+            <a href="{{route('comics.index')}}" class="text-white">Annulla</a>
+          </button>
+        </div>
+        
     </form>
 </section>
     
